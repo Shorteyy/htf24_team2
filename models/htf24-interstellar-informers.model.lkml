@@ -17,6 +17,11 @@ explore: planet
     sql_on: ${planet.host_id} = ${star.host_id} ;;
     relationship: many_to_one
   }
+  join: discovery_facility  {
+    sql_on: ${planet.facility_id} = ${discovery_facility.facility_id} ;;
+    relationship: many_to_one
+  }
+
 }
 
 explore: raw_planets {}
