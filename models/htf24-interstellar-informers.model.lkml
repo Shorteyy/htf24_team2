@@ -27,7 +27,15 @@ explore: planet
   join: discovery_facility  {
     sql_on: ${planet.facility_id} = ${discovery_facility.facility_id} ;;
     relationship: many_to_one
+
+
   }
+  join:  discovery_telescope {
+    sql_on: ${discovery_telescope.facility_id} =
+    ${discovery_facility.facility_id};;
+    relationship: many_to_one
+  }
+
 
 }
 
