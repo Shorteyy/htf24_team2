@@ -16,4 +16,10 @@ view: discovery_telescope {
   measure: count {
     type: count
   }
+
+  measure: countTelescopes
+  {
+    type: count_distinct
+    drill_fields: [discovery_telescope]
+  }
 }
