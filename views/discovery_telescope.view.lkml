@@ -20,6 +20,6 @@ view: discovery_telescope {
   measure: countTelescopes
   {
     type: count_distinct
-    drill_fields: [telescope_id]
+    sql: ${discovery_telescope} ;;
   }
 }

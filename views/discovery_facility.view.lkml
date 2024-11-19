@@ -12,4 +12,9 @@ view: discovery_facility {
   measure: count {
     type: count
   }
+  measure: count_facility
+  {
+    type: count_distinct
+    sql: ${facility_id} ;;
+  }
 }

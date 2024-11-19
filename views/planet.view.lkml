@@ -115,4 +115,34 @@ view: planet {
     type: count
     drill_fields: [planet_id, planet_name]
   }
+  measure: Avr_eccentricity
+  {
+    type: average
+    sql: ${eccentricity};;
+
+  }
+  measure: Avr_planet_density
+  {
+    type: average
+    sql: ${planet_density} ;;
+
+  }
+  measure: Avr_temperature_k
+  {
+    type: average
+    sql: ${equilibrium_temperature_k} ;;
+
+  }
+  measure: Avr_raduis
+  {
+    type: average
+    sql: ${planet_radius_earth} ;;
+
+  }
+  measure: Avr_flux
+  {
+    type: average
+    sql: ${insolation_flux_earth} ;;
+
+  }
 }
