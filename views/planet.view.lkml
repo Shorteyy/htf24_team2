@@ -115,4 +115,10 @@ view: planet {
     type: count
     drill_fields: [planet_id, planet_name]
   }
+  filter: Mass_Earth_To_Mass
+  {
+    type: number
+    suggest_dimension: planet_mass_earth
+    sql: WHERE EXISTS(SELECT WHERE ${planet_mass_earth} > 0.1 AND ${planet_mass_earth} < 10;;
+  }
 }
