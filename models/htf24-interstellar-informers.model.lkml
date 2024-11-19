@@ -5,11 +5,18 @@ include: "/views/**/*.view.lkml"
 
 
 
-explore: discovery_facility {}
+explore: discovery_facility {
+
+}
 
 explore: star {}
 
-explore: discovery_telescope {}
+explore: discovery_telescope {
+  join: discovery_facility {
+    sql_on: ${discovery_telescope.facility_id} = ${discovery_facility.facility_id} ;;
+    relationship: many_to_one
+  }
+}
 
 explore: planet
 {
