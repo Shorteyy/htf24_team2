@@ -145,4 +145,10 @@ view: planet {
     sql: ${insolation_flux_earth} ;;
 
   }
+  measure: Avr_Mass
+  {
+    type: average
+    sql: ${planet_mass_earth} ;;
+
+  }
 }
